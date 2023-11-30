@@ -80,3 +80,25 @@
 //   // Change code above this line
 //   return passed;
 // }
+
+// function isValidPassword(password) {
+//   const SAVED_PASSWORD = "jqueryismyjam";
+//   // Change code below this line
+//   const isMatch = password === "jqueryismyjam";
+
+//   // Change code above this line
+//   return isMatch;
+// }
+
+// function checkAge(age) {
+//   let message;
+
+//   if (age >= 18) {
+//     // Change this line
+//     message = "You are an adult";
+//   } else {
+//     message = "You are a minor";
+//   }
+
+//   return message;
+// }
