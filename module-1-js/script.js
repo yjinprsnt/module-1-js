@@ -55,3 +55,28 @@
 //   return message;
 // }
 
+// function calculateTotalPrice(orderedQuantity, pricePerItem) {
+//   // Change code below this line
+//   const totalPrice = orderedQuantity * pricePerItem;
+
+//   // Change code above this line
+//   return totalPrice;
+// }
+
+// function makeOrderMessage(orderedQuantity, pricePerDroid, deliveryFee) {
+//   // Change code below this line
+
+//   const message = `You ordered droids worth ${
+//     orderedQuantity * pricePerDroid + deliveryFee
+//   } credits. Delivery (${deliveryFee} credits) is included in total price.`;
+//   // Change code above this line
+//   return message;
+// }
+
+// function isAdult(age) {
+//   // Change code below this line
+//   const passed = age >= 18;
+
+//   // Change code above this line
+//   return passed;
+// }
