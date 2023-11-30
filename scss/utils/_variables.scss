@@ -1,0 +1,27 @@
+:root {
+  --main-font: 'Roboto', sans-serif;
+  --secondary-font: 'Raleway', sans-serif;
+
+  /* text color */
+  --main-txt-cl: #757575;
+  --secondary-txt-cl: #212121;
+  --accent-cl: #2196f3;
+
+  /* bacground text color */
+  --main-bg-cl: #ffffff;
+  --secondary-bg-cl: #f5f4fa;
+  --dark-bg-cl: #2f303a;
+  --border-item-cl: #eeeeee;
+  --icon-color: #afb1b8;
+
+  /* transitions */
+  --duration: 250ms;
+  --timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+
+  --gap-between-cards: 30px;
+
+  // box-shadow
+  --btn-box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.15);
+  --primary-box-shadow: 0px 2px 2px 0px #0000001f, 0px 1px 2px 0px #00000014,
+    0px 3px 1px 0px #0000001a;
+}

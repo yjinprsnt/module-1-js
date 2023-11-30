@@ -1,0 +1,30 @@
+body {
+  color: var(--main-txt-cl);
+  background-color: var(--main-bg-cl);
+
+  font-family: var(--main-font);
+  @include fonts(null, 14px, 1.71, 0.03em);
+}
+
+.section {
+  padding-top: 60px;
+  padding-bottom: 60px;
+
+  @include mq(desktop) {
+    padding-top: 94px;
+    padding-bottom: 94px;
+  }
+}
+
+.title {
+  @include fonts(700, 28px, 1.17, 0.03em);
+
+  @include mq(desktop) {
+    @include fonts(700, 36px, 1.16, 0.03em);
+  }
+}
+
+.btn {
+  cursor: pointer;
+  border: none;
+}

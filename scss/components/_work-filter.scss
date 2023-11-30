@@ -1,0 +1,57 @@
+/* = Project filter = */
+.work__list {
+  @include centeredFlex();
+  margin-bottom: 40px;
+
+  @include mq(mobile-only) {
+    flex-wrap: wrap;
+    justify-content: start;
+    row-gap: 15px;
+  }
+
+  @include mq(tablet) {
+    margin-bottom: 30px;
+  }
+
+  @include mq(desktop) {
+    margin-bottom: 50px;
+  }
+}
+
+.work__item:not(:last-child) {
+  margin-right: 8px;
+}
+
+.work__btn {
+  display: inline-flex;
+
+  padding-top: 6px;
+  padding-right: 25px;
+  padding-bottom: 6px;
+  padding-left: 25px;
+  border-radius: 4px;
+
+  @include fonts(500, 16px, 1.62, 0.03em);
+
+  color: var(--secondary-txt-cl);
+  background-color: var(--secondary-bg-cl);
+
+  transition: color var(--duration) var(--timing-function),
+    background-color var(--duration) var(--timing-function),
+    box-shadow var(--duration) var(--timing-function);
+
+  &:hover,
+  &:focus {
+    color: var(--main-bg-cl);
+    background-color: var(--accent-cl);
+    box-shadow: var(--primary-box-shadow);
+  }
+
+  &--active {
+    color: var(--main-bg-cl);
+    background-color: var(--accent-cl);
+    box-shadow: var(--primary-box-shadow);
+  }
+}
+
+/* = /Project filter = */

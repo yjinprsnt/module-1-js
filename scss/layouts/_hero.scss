@@ -1,0 +1,127 @@
+/* ====== Hero section ====== */
+.hero {
+  text-align: center;
+
+  // max-width: 480px;
+  min-height: 400px;
+
+  padding-top: 118px;
+  padding-bottom: 128px;
+
+  margin-left: auto;
+  margin-right: auto;
+
+  color: var(--main-bg-cl);
+  background-color: var(--dark-bg-cl);
+
+  background-image: linear-gradient(
+      to right,
+      rgba(47, 48, 58, 0.4),
+      rgba(47, 48, 58, 0.4)
+    ),
+    url('../images/bgimage/herobg_sm.jpg');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+
+  @include mq(retina) {
+    background-image: linear-gradient(
+        to right,
+        rgba(47, 48, 58, 0.4),
+        rgba(47, 48, 58, 0.4)
+      ),
+      url('../images/bgimage/herobg_sm@2x.jpg');
+  }
+
+  @include mq(tablet) {
+    min-width: 768px;
+
+    background-image: linear-gradient(
+        to right,
+        rgba(47, 48, 58, 0.4),
+        rgba(47, 48, 58, 0.4)
+      ),
+      url('../images/bgimage/herobg_md.jpg');
+
+    @include mq(retina) {
+      background-image: linear-gradient(
+          to right,
+          rgba(47, 48, 58, 0.4),
+          rgba(47, 48, 58, 0.4)
+        ),
+        url('../images/bgimage/herobg_md@2x.jpg');
+    }
+  }
+
+  @include mq(desktop) {
+    max-width: 1600px;
+    min-height: 600px;
+
+    padding-top: 200px;
+    padding-bottom: 200px;
+
+    background-image: linear-gradient(
+        to right,
+        rgba(47, 48, 58, 0.4),
+        rgba(47, 48, 58, 0.4)
+      ),
+      url('../images/bgimage/herobg_lg.jpeg');
+
+    @include mq(retina) {
+      background-image: linear-gradient(
+          to right,
+          rgba(47, 48, 58, 0.4),
+          rgba(47, 48, 58, 0.4)
+        ),
+        url('../images/bgimage/herobg_lg@2x.jpeg');
+    }
+  }
+
+  &__title {
+    max-width: 360px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 30px;
+    @include fonts(900, 26px, 1.61, 0.06em);
+
+    @include mq(desktop) {
+      min-width: 696px;
+      @include fonts(900, 44px, 1.36, 0.06em);
+    }
+  }
+}
+
+.hero__feedback-btn {
+  display: inline-flex;
+  min-width: 200px;
+  min-height: 50px;
+
+  padding-top: 10px;
+  padding-right: 24px;
+  padding-bottom: 10px;
+  padding-left: 24px;
+  border-radius: 4px;
+
+  text-align: center;
+  @include fonts(700, 16px, 1.87, 0.06em);
+
+  outline-color: var(--accent-cl);
+  color: var(--main-bg-cl);
+  background-color: var(--accent-cl);
+  box-shadow: var(--btn-box-shadow);
+
+  transition: background-color var(--duration) var(--timing-function);
+
+  &:hover,
+  &:focus {
+    background-color: #188ce8;
+  }
+
+  @include mq(desktop) {
+    min-width: 216px;
+    min-height: 50px;
+    padding-right: 32px;
+    padding-left: 32px;
+  }
+}
+/* ====== /Hero section ====== */

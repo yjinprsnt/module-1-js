@@ -1,0 +1,34 @@
+/* = logo = */
+.logo {
+  color: var(--accent-cl);
+  font-family: var(--secondary-font);
+  @include fonts(700, 26px, 1.2, null);
+
+  &--white {
+    color: #000000;
+  }
+  &--dark {
+    color: var(--main-bg-cl);
+  }
+}
+
+.header__logo {
+  outline-color: var(--accent-cl);
+  margin-right: 88px;
+
+  @include mq(mobile-only) {
+    padding-top: 16px;
+    padding-bottom: 16px;
+    margin-right: auto;
+  }
+
+  @include mq(desktop) {
+    margin-right: 93px;
+  }
+}
+
+.foot__logo {
+  display: inline-block;
+  margin-bottom: 20px;
+}
+/* = /logo = */

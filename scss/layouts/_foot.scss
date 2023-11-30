@@ -1,0 +1,83 @@
+/* ====== Footer ====== */
+.foot {
+  padding-top: 60px;
+  padding-bottom: 60px;
+
+  background-color: var(--dark-bg-cl);
+
+  @include mq(desktop) {
+    &__container {
+      display: flex;
+      align-items: baseline;
+    }
+  }
+}
+
+.foot__container {
+  @include mq(tablet-only) {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: baseline;
+  }
+}
+
+.foot-address-block {
+  @include mq(not-desktop) {
+    margin-bottom: 60px;
+    text-align: center;
+  }
+
+  @include mq(desktop) {
+    margin-right: 94px;
+  }
+}
+
+/* = Address block = */
+.foot-address {
+  display: block;
+
+  font-style: inherit;
+}
+
+.foot-address__item:not(:last-child) {
+  margin-bottom: 8px;
+
+  @include mq(desktop) {
+    margin-bottom: 9px;
+  }
+}
+
+.foot-address__address-link {
+  color: var(--main-bg-cl);
+
+  transition: color var(--duration) var(--timing-function);
+
+  &:hover,
+  &:focus {
+    color: var(--accent-cl);
+  }
+}
+
+.foot-address__mail-link {
+  color: rgba(255, 255, 255, 0.6);
+
+  transition: color var(--duration) var(--timing-function);
+
+  &:hover,
+  &:focus {
+    color: var(--accent-cl);
+  }
+}
+
+.foot-address__tel-link {
+  color: rgba(255, 255, 255, 0.6);
+
+  transition: color var(--duration) var(--timing-function);
+
+  &:hover,
+  &:focus {
+    color: var(--accent-cl);
+  }
+}
+/* ====== /Footer ====== */

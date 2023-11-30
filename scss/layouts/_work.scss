@@ -1,0 +1,136 @@
+/* ====== Work section ====== */
+.project-list {
+  display: block;
+
+  @include mq(tablet) {
+    display: flex;
+    flex-wrap: wrap;
+
+    margin: -15px;
+  }
+}
+
+.project-list__item {
+  max-width: 450px;
+  max-height: 404px;
+
+  @include mq(mobile-only) {
+    &:not(:last-child) {
+      margin-bottom: 30px;
+    }
+  }
+
+  @include mq(tablet-only) {
+    min-width: 354px;
+    max-height: 440px;
+
+    flex-basis: calc((100% - 2 * 30px) / 2);
+    margin: 15px;
+  }
+
+  @include mq(desktop) {
+    min-width: 370px;
+
+    flex-basis: calc((100% - 3 * 30px) / 3);
+    margin: 15px;
+  }
+}
+
+.project-list__link {
+  display: block;
+
+  transition: box-shadow var(--duration) var(--timing-function);
+
+  &:hover,
+  &:focus {
+    box-shadow: 1px 4px 6px 0px #00000029, 0px 4px 4px 0px #0000000f,
+      0px 1px 1px 0px #0000001f;
+  }
+
+  @include mq(tablet-only) {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+  }
+}
+
+.project-wrapper {
+  position: relative;
+  overflow: hidden;
+}
+
+.project-wrapper__deck {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+
+  @include fonts(null, 18px, 1.55, 0.03em);
+  text-align: left;
+
+  padding-top: 35px;
+  padding-right: 24px;
+  padding-bottom: 35px;
+  padding-left: 24px;
+
+  overflow: auto;
+
+  @include mq(mobile) {
+    padding-top: 77px;
+    padding-bottom: 77px;
+  }
+
+  @include mq(tablet) {
+    padding-top: 49px;
+  }
+
+  @include mq(desktop) {
+    padding-top: 63px;
+    padding-bottom: 63px;
+  }
+
+  opacity: 0;
+
+  color: var(--main-bg-cl);
+  background-color: rgba(33, 150, 243, 0.9);
+
+  transform: translateY(100%);
+  transition: transform var(--duration) var(--timing-function);
+
+  .project-list__link:hover &,
+  .project-list__link:focus & {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+.project-list__content {
+  padding-top: 20px;
+  padding-right: 24px;
+  padding-bottom: 20px;
+  padding-left: 24px;
+
+  border-right: 1px solid var(--border-item-cl);
+  border-bottom: 1px solid var(--border-item-cl);
+  border-left: 1px solid var(--border-item-cl);
+
+  @include mq(tablet-only) {
+    flex-grow: 1;
+  }
+}
+
+.project-list__subtitle {
+  margin-bottom: 4px;
+
+  @include fonts(700, 18px, 2, 0.06em);
+
+  color: var(--secondary-txt-cl);
+}
+
+.project-list__deck {
+  @include fonts(null, 16px, 1.87, null);
+
+  color: var(--main-txt-cl);
+}
+/* ====== /Work section ====== */
